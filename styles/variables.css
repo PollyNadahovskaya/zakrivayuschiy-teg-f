@@ -1,28 +1,40 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
 :root {
   --color-black: #000000;
   --color-white: #ffffff;
-  --color-green: #00cc14;
+  --color-red: #ff0000;
+  --color-gray-light: #d3d3d3;
+  --color-gray-dark: #1a1a1a;
+  --color-gray-medium: #e7e7e7;
 
-  --text-color: var(--color-black, #000000);
-  --page-background-color: var(--color-white, #ffffff);
+  --text-color: var(--color-black);
+  --background-color: var(--color-white);
+  --button-text-color: var(--background-color);
 
-  --page-main-font-family: "Inter", sans-serif;
-  --page-main-font-weight: 400;
-  --page-accent-font-family: "PressStart2P", fantasy;
-  --page-background-image: repeating-linear-gradient(
-      to left,
-      #d3d3d3 0 2px,
-      #d3d3d300 2px 4px
+  --main-font-family: "Inter", sans-serif;
+  --main-font-weight: 400;
+  --accent-font-family: "PressStart2P", fantasy;
+  --headings-font-weight: 715;
+
+  --background-image: repeating-linear-gradient(
+      to right,
+      var(--color-gray-light) 0 2px,
+      transparent 2px 4px
     ),
-    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, #d3d3d300 2px 4px),
-    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    repeating-linear-gradient(
+      to bottom,
+      var(--color-gray-light) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      to bottom,
+      var(--color-gray-medium) 0.01%,
+      var(--color-gray-dark)
+    );
 
-  --like-main-body-color: none;
-  --like-contour-color: var(--text-color, #000000);
-  --like-sparks-color: #ff0000;
-
-  --headings-font-weight: 700;
-
-  --button-text-color: var(--page-background-color, #fff);
+  --like-contour-color: var(--text-color);
+  --like-sparks-color: var(--color-red);
+  --animation-fill-color: var(--color-red);
+  --card-width: clamp(375px, 50%, 700px);
 }

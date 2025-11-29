@@ -1,16 +1,12 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 
 */
 
@@ -44,199 +40,102 @@
 
 .page {
   padding-block-start: 100px;
-  color: var(--text-color, #000000);
-  font-family: var(--page-main-font-family, "Inter", sans-serif);
-  background-color: var(--page-background-color, #ffffff);
-  background-image: var(--page-background-image, none);
+  color: var(--text-color);
+  font-family: var(--main-font-family);
+  background-color: var(--background-color);
+  background-image: var(--background-image);
   background-size: cover;
   background-attachment: fixed;
-  font-variation-settings: "wght" var(--page-main-font-weight, 400);
+  font-variation-settings: "wght" var(--main-font-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
-}
-
-.page__header {
-  margin-block-end: 100px;
-}
-
-.modal {
-  border: 2px solid var(--text-color, #000000);
-  padding: 25px 30px;
-  color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  line-height: 1.5;
-  text-transform: uppercase;
-  background: var(--page-background-color, #ffffff);
-  max-inline-size: 355px;
-}
-
-.modal[open] {
-  display: grid;
-  /* Safari fix */
-  grid-template-rows: repeat(2, min-content);
-  gap: 30px;
-}
-
-.modal::backdrop {
-  opacity: 0.75;
-  background: var(--color-black, #000000);
-}
-
-.modal__content {
+  gap: 99px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
-}
-
-.modal__icon {
-  flex-shrink: 0;
-  inline-size: 39px;
-  block-size: 39px;
-}
-
-.modal__button {
-  inline-size: 100%;
-}
-
-.page-title {
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
 }
 
 .header {
-  display: grid;
-  justify-items: center;
+  font-family: var(--accent-font-family);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
-  line-height: normal;
-  text-transform: uppercase;
+  align-items: center;
+  gap: 20px;
+  padding-block: clamp(120px, 3.637rem + 12.512vi, 130px);
 }
 
 .header__title {
-  margin-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem);
-  margin-block-end: 20px;
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 1.0087rem + 4.9231vw, 4.0625rem);
+  text-transform: uppercase;
 }
 
 .header__subtitle {
-  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-}
-
-.header__theme-menu {
-  margin-block: 25px;
-}
-
-.theme-menu__list {
-  display: grid;
-  gap: 8px;
-  padding-inline-start: 20px;
-}
-
-.theme-menu__button {
-  position: relative;
-  border: none;
-  font-size: 14px;
+  font-family: var(--accent-font-family);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.4423rem + 1.8462vw, 23px);
   text-transform: uppercase;
-  background: transparent;
-  transition: opacity 0.3s ease;
-  cursor: pointer;
-  appearance: none;
 }
 
-.theme-menu__button:not(:disabled)::after {
-  content: "";
-  display: block;
-  background: currentColor;
-  transition: transform 0.3s ease;
-  transform: scaleX(0);
-  transform-origin: left;
-  inline-size: 100%;
-  block-size: 2px;
-}
-
-.theme-menu__button:hover {
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus {
-  outline: none;
-  opacity: 0.6;
-}
-
-.theme-menu__button:focus-visible::after {
-  transform: scaleX(1);
-}
-
-.theme-menu__button:disabled {
-  opacity: 0.6;
-  cursor: default;
-  pointer-events: none;
-}
-
-.theme-menu__button:disabled::before {
-  content: "▶";
-  position: absolute;
-  animation: arrow 0.5s ease-in-out infinite alternate;
-  inset-inline-start: -20px;
-  /* Safari fix */
-  inset-block-start: 0px;
-}
-
-.main {
+.content {
   display: grid;
   justify-items: center;
-  gap: 57px;
-  padding-block-end: 105px;
+  gap: 50px;
+  padding-block-end: 99px;
 }
 
-.cards-list {
-  display: grid;
-  gap: 52px;
+.panels {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
 }
 
-.card {
-  margin-inline: auto;
-  border: 2px solid var(--text-color, #000000);
-  background: var(--page-background-color, #ffffff);
-  max-inline-size: 696px;
+.panel {
+  border: 2px solid var(--text-color);
+  background: var(--background-color);
+  inline-size: var(--card-width);
 }
 
-.card__header {
-  border-block-end: 2px solid var(--text-color, #000000);
+.panel__header {
+  border-block-end: 2px solid var(--text-color);
   padding: 4px 10px;
 }
 
-.card__title {
+.panel__title {
   font-size: 18px;
   line-height: normal;
-  font-variation-settings: "wght" var(--headings-font-weight, 700);
+  font-variation-settings: "wght" var(--headings-font-weight);
 }
 
-.card__img-wrapper {
+.panel__image-container {
   position: relative;
-  /* overflow - для коррекции эффектов filter blur */
   overflow: hidden;
 }
 
-.card__img-label {
+.panel__image-label {
   position: absolute;
   z-index: 1;
 
   opacity: 0.5;
 
-  color: var(--text-color, #000000);
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  color: var(--text-color);
+  font-family: var(--accent-font-family);
 
   font-size: 14px;
   line-height: normal;
 
   text-transform: uppercase;
-  text-shadow: 0 0 1px var(--page-background-color, #ffffff);
+  text-shadow: 0 0 1px var(--background-color);
   inset-inline-end: 13px;
   inset-block-start: 24px;
 
   mix-blend-mode: hard-light;
 }
 
-.card__img {
+.panel__image {
   display: block;
   object-fit: cover;
   object-position: center;
@@ -244,21 +143,21 @@
   aspect-ratio: 1 / 1;
 }
 
-.card__content {
+.panel__body {
   display: grid;
-  gap: 27px;
-  border-block-start: 2px solid var(--text-color, #000000);
-  padding: 25px 30px 0 25px;
+  gap: 25px;
+  border-block-start: 2px solid var(--text-color);
+  padding: 27px 25px 0 25px;
   font-size: 18px;
   line-height: calc(21 / 18);
 }
 
-.card__footer {
+.panel__footer {
   display: flex;
   justify-content: end;
   align-items: stretch;
-  gap: 5px;
-  padding: 25px 25px 23px 25px;
+  gap: 12px;
+  padding: 25px;
 }
 
 .card__icon-button {
@@ -276,37 +175,40 @@
 }
 
 .card__icon-button:focus-visible {
-  border-color: var(--text-color, #000000);
+  border-color: var(--text-color);
 }
 
-.button {
+.btn {
   position: relative;
   z-index: 1;
-  border: 2px solid var(--text-color, #000000);
-  padding: 10px 36px;
-  font-family: var(--page-accent-font-family, "PressStart2P", fantasy);
+  border: 2px solid var(--text-color);
+  font-family: var(--accent-font-family);
   font-size: 14px;
   text-transform: inherit;
-  background: var(--page-background-color, #ffffff);
+  background: var(--background-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
+  block-size: 38px;
+  inline-size: 130px;
+  line-height: 0.9;
+  overflow: hidden;
 }
 
-.button:focus {
+.btn:focus {
   outline: none;
 }
 
-.button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--text-color, #000000);
+.btn:focus-visible {
+  box-shadow: 2px 2px 0px 0px var(--text-color);
 }
 
-.button::before {
+.btn::before {
   content: "";
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: var(--text-color, #000000);
+  background: var(--text-color);
   transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
@@ -314,59 +216,114 @@
   block-size: 100%;
 }
 
-.button:hover::before {
+.btn:hover::before {
   transform: scaleX(1);
 }
 
-.button--save {
+.btn--store {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 10px;
   padding: 15px 20px;
+  block-size: auto;
+  inline-size: auto;
 }
 
-.button__text,
-.button__icon {
-  color: var(--button-text-color, #ffffff);
+.button__text {
+  position: relative;
+  z-index: 1;
+  color: var(--button-text-color);
   mix-blend-mode: difference;
 }
 
-.button__icon {
-  block-size: 22px;
-  inline-size: 22px;
+.btn__icon {
+  block-size: 21px;
+  inline-size: 21px;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .like-icon {
   block-size: 36px;
-  inline-size: 39px;
+  inline-size: 38px;
 }
 
-/* 376 взято так как в фигме на 375 уже стоят определенные стили, а при использовании width <= 375px 375 все еще включает в себя стили для значений больше 375 ???? */
-@media (width < 376px) {
-  .modal {
-    padding: 28px 34px 28px 40px;
+.dialog-box {
+  border: 2px solid var(--text-color);
+  padding: 30px;
+  color: var(--text-color);
+  font-family: var(--accent-font-family);
+  line-height: 1.5;
+  text-transform: uppercase;
+  background: var(--background-color);
+  max-inline-size: 353px;
+  font-size: 14px;
+}
+
+.dialog-box[open] {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
+}
+
+.dialog-box::backdrop {
+  opacity: 0.75;
+  background: var(--color-black);
+}
+
+.dialog-box__body {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog-box__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
+
+.dialog-box__btn {
+  inline-size: 100%;
+}
+
+@media (width <= 375px) {
+  .page {
+    gap: 100px;
+  }
+
+  .content {
+    padding-block-end: 100px;
+  }
+
+  .panel__body {
+    padding: 25px 25px 0 25px;
+  }
+
+  .dialog-box {
+    padding: 30px 40px;
     max-inline-size: 340px;
   }
 
-  .button--save {
+  .btn--store {
     flex-direction: column;
   }
 
-  .button__icon {
+  .btn__icon {
     block-size: 28px;
     inline-size: 28px;
   }
+
+  .dialog-box__body {
+    gap: 12px;
+  }
 }
 
-@supports (
-  (-webkit-text-stroke: 1px var(--page-background-color, #ffffff)) or
-    (text-stroke: 1px var(--page-background-color, #ffffff))
-) {
-  .card__img-label {
+@supports (-webkit-text-stroke: 1px var(--background-color)) {
+  .panel__image-label {
     text-shadow: none;
-    -webkit-text-stroke: 1px var(--page-background-color, #ffffff);
-    text-stroke: 1px var(--page-background-color, #ffffff);
+    -webkit-text-stroke: 1px var(--background-color);
   }
 }
