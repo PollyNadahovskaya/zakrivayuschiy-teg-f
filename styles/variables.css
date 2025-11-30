@@ -1,8 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --color-black: #000000;
-  --color-white: #ffffff;
+  --color-black: #000;
+  --color-white: #fff;
   --color-red: #ff0000;
   --color-gray-light: #d3d3d3;
   --color-gray-dark: #1a1a1a;
@@ -12,9 +12,9 @@
   --background-color: var(--color-white);
   --button-text-color: var(--background-color);
 
-  --main-font-family: "Inter", sans-serif;
+  --main-font-family: 'Inter', sans-serif;
   --main-font-weight: 400;
-  --accent-font-family: "PressStart2P", fantasy;
+  --accent-font-family: 'PressStart2P', fantasy;
   --headings-font-weight: 715;
 
   --background-image: repeating-linear-gradient(
@@ -37,4 +37,5 @@
   --like-sparks-color: var(--color-red);
   --animation-fill-color: var(--color-red);
   --card-width: clamp(375px, 50%, 700px);
+  --bg-dialog: var(--color-black);
 }
