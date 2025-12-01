@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Закрывающий тег</title>
-  <link rel="icon" href="./images/favicon.ico" />
-  <link rel="icon" href="./images/favicon.png" />
-  <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="./images/favicon.ico" sizes="any">
+  <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="./images/favicon.png">
   <link rel="stylesheet" href="./fonts/fonts.css" />
   <link rel="stylesheet" href="./styles/variables.css" />
   <link rel="stylesheet" href="./styles/globals.css" />
@@ -21,7 +21,7 @@
     <h1 class="header__subtitle">закрывающий тег</h1>
   </header>
   <main class="content">
-    <div class="panels">
+    <section class="panels">
       <article class="panel">
         <header class="panel__header">
           <h2 class="panel__title">
@@ -30,7 +30,8 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;Начнем же&gt;</span>
-          <img class="panel__image filter-grayscale" src="https://i.imgflip.com/1g8my4.jpg" alt="Мем о начале учебы" loading="lazy" />
+          <img class="panel__image filter-grayscale" src="./images/panel-1.jpg" alt="Я, заряженная на учебу"
+            loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
@@ -41,7 +42,8 @@
         </div>
         <footer class="panel__footer">
           <button aria-label="Лайкнуть статью" type="button" class="card__icon-button">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 36" fill="none" class="like-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 36" fill="none" class="like-icon"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour"
                   d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24 6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27 18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
@@ -69,7 +71,7 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;отличный старт&gt;</span>
-          <img class="panel__image filter-multiple" src="https://i.imgflip.com/26am.jpg" alt="Мем о начале программирования" loading="lazy" />
+          <img class="panel__image filter-multiple" src="./images/panel-2.jpg" alt="я" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
@@ -109,7 +111,7 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;Верь в себя&gt;</span>
-          <img class="panel__image filter-hue-rotate" src="https://i.imgflip.com/1bhk.jpg" alt="Мем о вере в себя" loading="lazy" />
+          <img class="panel__image filter-hue-rotate" src="./images/panel-3.jpg" alt="я" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
@@ -148,7 +150,7 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;Начнем второй спринт&gt;</span>
-          <img class="panel__image filter-saturate" src="https://i.imgflip.com/1bhw.jpg" alt="Мем о погоне за идеалом" loading="lazy" />
+          <img class="panel__image filter-saturate" src="./images/panel-4.jpg" alt="я" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
@@ -157,7 +159,7 @@
             перфекционизму и вместо того, чтобы сделать идеально, старались просто сделать.
           </p>
           <p class="panel__text">
-           Все выглядит легко
+            Все выглядит легко
           </p>
         </div>
         <footer class="panel__footer">
@@ -190,7 +192,7 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;В тебя верят&gt;</span>
-          <img class="panel__image filter-invert" src="https://i.imgflip.com/1bh5.jpg" alt="Мем о поддержке друзей" loading="lazy" />
+          <img class="panel__image filter-invert" src="./images/panel-5.jpg" alt="я с подружкой" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
@@ -233,11 +235,12 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;решай все, что видишь&gt;</span>
-          <img class="panel__image filter-sepia" src="https://i.imgflip.com/1bh8.jpg" alt="Мем о решении задач" loading="lazy" />
+          <img class="panel__image filter-sepia" src="./images/panel-6.jpg" alt="я" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
-            На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто иссякли. Значит, пришло время посмотреть на задачу под другим углом.
+            На этом курсе вы постоянно решали разные задачи. В какой-то момент вам могло показаться, что решения просто
+            иссякли. Значит, пришло время посмотреть на задачу под другим углом.
           </p>
           <p class="panel__text">
             Все решили, класс
@@ -273,11 +276,13 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;не опускай руки&gt;</span>
-          <img class="panel__image filter-blur" src="https://i.imgflip.com/1bh9.jpg" alt="Мем о трудностях в учебе" loading="lazy" />
+          <img class="panel__image filter-blur" src="./images/panel-7.jpg" alt="я" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
-            Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать, и задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень нужна концентрация. Вспомните, откуда вы её черпали.
+            Во время учёбы часто возникает чувство, когда не знаешь, за что хвататься. Вроде и проектную пора сдавать, и
+            задачи хочется порешать, и в теории получше разобраться, и жизнь не забыть пожить. В такие моменты очень
+            нужна концентрация. Вспомните, откуда вы её черпали.
           </p>
           <p class="panel__text">
             Все сделано, класс
@@ -313,11 +318,14 @@
         </header>
         <div class="panel__image-container">
           <span class="panel__image-label">&lt;Я справлюсь&gt;</span>
-          <img class="panel__image filter-grayscale" src="https://i.imgflip.com/1bhq.jpg" alt="Мем о завершении и успехе" loading="lazy" />
+          <img class="panel__image filter-grayscale" src="./images/panel-8.jpeg" alt="я" loading="lazy" />
         </div>
         <div class="panel__body">
           <p class="panel__text">
-            Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания. Ведь часто путь — и есть результат.
+            Сейчас вы уже очень много знаете о вёрстке. Но это только начало. Во-первых, впереди ещё много материала про
+            «красотищу». Во-вторых, с окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И этот мир
+            постоянно меняется. Познать его полностью не получится, но это тот случай, когда важен сам процесс познания.
+            Ведь часто путь — и есть результат.
           </p>
           <p class="panel__text">
             Я в себя верю
@@ -347,17 +355,19 @@
           </button>
         </footer>
       </article>
-      <button type="button" onclick="window.modal.showModal();" aria-label="Сохранить на память" aria-controls="modal" class="btn btn--store">
+      <button type="button" onclick="window.modal.showModal();" aria-label="Сохранить на память" aria-controls="modal"
+        class="btn btn--store">
         <svg class="btn__icon" viewBox="0 0 28 28" aria-hidden="true">
-          <use href="svg/floppy.svg#floppy" />
+          <use href="./svg/floppy.svg#floppy" />
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+    </section>
   </main>
   <dialog class="dialog-box" id="modal" aria-labelledby="dialog-title">
     <div class="dialog-box__body">
       <svg class="dialog-box__icon" viewBox="0 0 28 28" aria-hidden="true">
-        <use href="svg/floppy.svg#floppy" />
+        <use href="./svg/floppy.svg#floppy" />
       </svg>
       <p class="dialog-box__text" id="dialog-title">Вставьте дискету,чтобы продолжить</p>
     </div>
